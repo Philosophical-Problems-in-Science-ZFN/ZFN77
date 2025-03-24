@@ -1435,8 +1435,8 @@
 \fi
 \SectionNumbersOn
 
-\setlength{\bibitemsep}{2pt}
-\setlength{\bibparsep}{2pt}
+\setlength{\bibitemsep}{1pt}
+\setlength{\bibparsep}{1pt}
 
 \renewbibmacro*{bib+doi+url}{%
   \iffieldundef{doi}{%
