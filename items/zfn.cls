@@ -679,7 +679,7 @@
   \fi
   \newpage\vspace*{\dimexpr-\headsep-\headheight\relax}
     \noindent
-    \begin{minipage}[t]{\dimexpr\textwidth-28mm\relax}
+    \begin{minipage}[t]{\dimexpr\textwidth-25mm\relax}
       \vspace{0pt}% Force top alignment from first line
       {\firstheadsize{\journalnamefont\zfn@journal@name} 
       (\zfn@year), {\volumefont\zfn@vol}, \thepage--\pageref{LastPage}
@@ -687,9 +687,9 @@
       \vspace{7pt}%
       \par {\sffamily\bfseries\color{structure@color}\MakeUppercase{\convertchar{\zfn@manuscript}{-}{ }}\par}
     \end{minipage}%
-    \begin{minipage}[t]{28mm}
+    \begin{minipage}[t]{25mm}
       \vspace{0pt}
-      \includegraphics[width=28mm]{ZFN_ENG_waskie}
+      \includegraphics[width=25mm]{ZFN_ENG_waskie}
     \end{minipage}
     \par
 %  \parbox[b]{\dimexpr\textwidth-36mm\relax}{%
