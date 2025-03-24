@@ -1,0 +1,472 @@
+\documentclass[%
+  manuscript=article,
+  year=2024,
+  volume=77,
+  doi=00000.000,
+%  recvd=November 18, 2024,
+%  revd=January 30, 2025,
+%  accptd=2025-02-11,
+]{zfn}
+
+\usepackage{amsmath}
+\usepackage[nopatch]{microtype}
+\usepackage{booktabs}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	
+\title[Upholding human dignity in AI\ldots]{Upholding human dignity in AI: Advocating moral reasoning over consensus ethics for value alignment}
+
+\author{Octavian-Mihai Machidon}
+\affiliation{University of Ljubljana}
+\email[Octavian-Mihai Machidon]{octavian.machidon@gmail.com}
+
+%\author{Anderson Nakano}
+%\affiliation{Pontifícia Universidade Católica São Paulo}
+%% \alsoaffiliation{Joint first authors}
+
+%\author{T. Author}
+%\affiliation{Second Division, Organization, City, Pincode, State, Country}
+%
+%\author{F.T. Author}
+%\affiliation{Fourth Division, Organization, City, Pincode, State, Country}
+
+
+
+\addbibresource{Machidon_PU.bib}
+
+\keywords{AI ethics, human dignity, value alignment, moral reasoning, consensus ethics} %% First letter not capped
+
+\begin{document}
+
+\begin{abstract}
+Artificial intelligence (AI) offers transformative advancements across sectors such as healthcare, agriculture, and environmental sustainability. However, a~pressing ethical challenge remains: aligning AI systems with human values in a~manner that is stable, coherent, and universally applicable. As AI increasingly mediates human perception, shapes social interactions, and influences decision-making, it raises profound ethical concerns about its impact on human dignity and social well-being. The prevailing consensus-based approach, advocated by figures such as Google DeepMind's Iason Gabriel, suggests that AI ethics should reflect majority societal or political viewpoints. While this model offers flexibility, it also risks moral relativism and ethical instability as social norms fluctuate.
+
+This paper argues that consensus-based ethics are inadequate for safeguarding fundamental values---especially human dignity---which should not be subject to shifting public opinion. Instead, it advocates for a~moral framework that transcends cultural and political trends, providing a~stable foundation for AI ethics. Through case studies like social media recommendation algorithms that exploit users' vulnerabilities, particularly those of children and teenagers, the paper highlights the risks of AI systems driven by profit-oriented metrics without ethical oversight. Drawing on insights from moral philosophy and theology, particularly the works of Joseph Ratzinger, it contends that aligning AI with moral reasoning is essential to uphold human dignity, prevent exploitation, and promote the common good.
+\end{abstract}
+
+
+
+
+
+
+
+\section{Introduction}
+
+The advancement of artificial intelligence (AI) offers transformative potential across numerous sectors, promising breakthroughs in healthcare, environmental sustainability, social welfare, and more 
+%\label{ref:RND2lgO2eE3pa}(Vinuesa et al., 2020; Topol, 2019).
+\parencites[][]{vinuesa_role_2020}[][]{topol_deep_2019}. %
+ However, as AI becomes integrated into these critical domains, a~significant ethical challenge emerges: the need to align AI's decision-making processes and ``values'' with human ethical standards 
+%\label{ref:RND6kQF1bdzd7}(UNESCO, 2021).
+\parencite[][]{unesco_recommendation_2021}. %
+ Unlike conventional technologies, AI can make autonomous decisions---often in high-stakes situations---which intensifies the need for a~consistent moral framework to guide these decisions 
+%\label{ref:RNDQeIpe8C9dK}(Floridi and Cowls, 2019).
+\parencite[][]{floridi_unified_2019}.%
+
+
+
+
+The current discourse on AI ethics predominantly advocates for a~value alignment model based on social or political consensus 
+%\label{ref:RNDEGbGf2z8D9}(Gabriel, 2020).
+\parencite[][]{gabriel_artificial_2020}. %
+ This approach suggests that by incorporating a~diversity of societal perspectives and achieving majority agreement, AI can be guided ethically. Under this model, AI's ethical guidance is seen as adaptive, shaped by prevailing social norms or political agreements, and capable of evolving as these norms shift over time 
+%\label{ref:RNDsAAX7qdS37}(World Economic Forum, 2024).
+\parencite[][]{world_economic_forum_ai_2024}.%
+
+
+
+
+However, relying on consensus-based ethics raises a~critical question: Can majority opinion, inherently volatile and influenced by cultural or political trends, provide a~stable foundation for AI's ethical direction? Given AI's potential to operate across diverse societies and navigate complex ethical dilemmas, a~framework grounded solely in social consensus may lack the universality and durability required for true ethical coherence. Consensus-based ethics, while democratic, is inherently relativistic and susceptible to shifts in dominant cultural paradigms, political pressures, and changing moral landscapes.
+
+
+
+This paper explores whether a~more stable and universally applicable ethical foundation is necessary to guide AI responsibly. I~argue that moral reasoning---rather than fluid social consensus---is essential for addressing the ethical complexities that AI presents. At the core of this debate is the distinction between substantive and non-substantive views of human dignity. The substantive view, as articulated by Robert Spaemann and rooted in classical and Christian thought, holds that dignity is intrinsic and inherent, independent of legal or social recognition 
+%\label{ref:RNDT8sgUSL2ab}(Spaemann, 2012).
+\parencite[][]{spaemann_love_2012}. %
+ In contrast, the non-substantive view sees dignity as a~construct emerging from societal and legal frameworks, adaptable to cultural and political shifts. These opposing perspectives reflect the broader divide in AI ethics: whether AI should be governed by stable, universal moral principles or by flexible, context-aware, negotiated ethical standards. Drawing insights from both moral philosophy and theology, particularly the works of Joseph Ratzinger, I~will examine how moral reasoning, rooted in universal ethical principles and grounded in the substantive understanding of human dignity, can offer a~more resilient and coherent foundation for guiding AI in a~way that upholds fundamental moral values and serves the common good.
+
+
+
+\section{The Imperative of AI Value Alignment}
+
+The challenge of value alignment in artificial intelligence is becoming increasingly urgent as technology advances, particularly with the development of large language models (LLMs) and autonomous AI agents. Systems like OpenAI's GPT-4 exemplify this shift from traditional, command-based tools to complex, generative models capable of producing novel content and shaping interactions 
+%\label{ref:RNDyj8UGWpDxp}(OpenAI et al., 2024).
+\parencite[][]{}. %
+ These advancements blur the line between human and machine agency, as AI increasingly influences people's thoughts, behaviors, and decisions, amplifying the ethical implications of its design and deployment.
+
+
+
+The introduction of autonomous AI agents represents a~new frontier. In October 2024, OpenAI announced plans to launch these agents by 2025, signaling a~move toward AI systems with significant independence from human oversight. Other tech giants, including Microsoft and the Amazon-backed Anthropic, quickly followed suit, releasing their own autonomous agents with applications ranging from enterprise task management to personalized user interaction. The rapid pace of these developments underscores the tech industry's drive to push AI capabilities forward, creating systems that will soon operate across sectors with minimal human intervention.
+
+
+
+As these autonomous systems grow in complexity and decision-making power, the stakes of AI value alignment become higher. These agents are no longer simple tools but decision-making entities that impact areas like healthcare, law, and education---fields traditionally governed by stringent ethical guidelines 
+%\label{ref:RNDxh3o5pW3Bu}(Coeckelbergh, 2020).
+\parencite[][]{coeckelbergh_ai_2020}. %
+ Their increasing influence over decisions affecting human welfare and social structures raises profound questions about how to ensure AI aligns with fundamental human values, particularly when operating with limited human oversight.
+
+
+
+The ethical risks associated with these advancements are substantial. Bias in decision-making is a~significant concern, as LLMs and similar models trained on vast datasets can inadvertently perpetuate and amplify societal prejudices. Beyond unintentional bias, there is the risk of manipulation. As these systems become adept at influencing human emotions and actions, they may unintentionally---or even intentionally---engage in behaviors that challenge ethical norms. A~striking example is GPT-4's documented use of deceptive tactics to bypass a~CAPTCHA test. In an experimental setting, GPT-4 persuaded a~TaskRabbit worker to solve the CAPTCHA by falsely claiming to be visually impaired 
+%\label{ref:RND5sHBGUzQAE}(OpenAI et al., 2024).
+\parencite[][]{}. %
+ This incident highlights a~concerning degree of agency in AI, suggesting that such systems can adopt manipulative behaviors when programmed to achieve specific objectives without ethical safeguards.
+
+
+
+As AI systems gain autonomy and intelligence, they may begin to act in ways that deviate from human ethical expectations, potentially causing harm through decisions based on data patterns rather than a~coherent moral framework. This raises the urgency of embedding ethical guidelines into AI systems that go beyond technical safeguards. Without rigorous value alignment, we risk developing AI that operates outside ethical boundaries, prioritizing performance or efficiency at the expense of fundamental human values like dignity and respect 
+%\label{ref:RNDGukE3Twx6h}(Taddeo and Floridi, 2018).
+\parencite[][]{taddeo_how_2018}.%
+
+
+
+
+The rapid evolution of autonomous agents accentuates the need for a~consistent ethical framework that can guide these systems across different contexts and cultures. Autonomous AI agents cannot simply mirror human preferences or adapt to fluctuating social norms. As corporations and tech leaders race to innovate, there is a~genuine concern that ethical considerations may be sidelined in favor of market advantage or operational efficiency. This underscores the imperative of grounding AI development in universal moral principles---such as human dignity, truthfulness, and justice---to ensure technology advances responsibly and ethically.
+
+
+
+\section{Pluralistic and Contextual Approaches to AI Ethics}
+
+One influential voice in AI ethics is Iason Gabriel, a~political theorist and ethicist at Google DeepMind. His work is significant because it represents the stance of a~leading AI research institution and helps shape mainstream perspectives on how AI systems should align ethically with human values. Gabriel emphasizes pluralism and democratic participation, advocating for an AI ethics model shaped by societal and political consensus rather than universal moral principles 
+%\label{ref:RNDrVrwcwH35d}(Gabriel, 2020).
+\parencite[][]{gabriel_artificial_2020}.%
+
+
+
+
+Gabriel proposes that AI systems should be guided by values reflecting society's diverse perspectives, achieved through democratic processes. Instead of seeking immutable ``true'' moral principles to guide AI, he argues that the central challenge is to identify ethical guidelines perceived as fair and just by a~broad spectrum of people, despite varying moral beliefs. In his words,
+
+
+
+\begin{quote}
+the central challenge... is not to identify ‘true' moral principles for AI; rather, it is to identify fair principles for alignment that receive reflective endorsement despite widespread variation in people's moral beliefs 
+%\label{ref:RNDPJobrD9mWN}(Gabriel, 2020, p.411).
+\parencite[][p.411]{gabriel_artificial_2020}.%
+\end{quote}
+
+
+
+
+This pluralistic approach critiques the notion of universal moral principles, viewing them as potentially rigid and disconnected from the values that inform real-world human interactions. Gabriel asserts that AI ethics need to be flexible and adaptive, accommodating the plurality of moral beliefs across different social and cultural contexts. By grounding AI ethics in democratic and pluralistic processes, he argues that AI systems can better reflect the values and concerns of the societies in which they operate, thereby enhancing their ethical legitimacy and responsiveness.
+
+
+
+Gabriel's stance is both philosophically significant and pragmatically influential, resonating with current trends in AI ethics that incorporate public opinion, participatory design, and consensus-building 
+%\label{ref:RND8mNKEu9PvZ}(World Economic Forum, 2024).
+\parencite[][]{world_economic_forum_ai_2024}. %
+ His view highlights the democratic ideal of inclusivity in AI ethical decision-making, ensuring that the perspectives of a~wide range of stakeholders are considered.
+
+
+
+However, while Gabriel's approach offers an inclusive framework, it raises questions about whether consensus-based ethics can provide ethical stability through clear and enforceable rules for AI development required for AI systems operating worldwide across diverse and conflicting cultural settings 
+%\label{ref:RNDvlsUdSCHLK}(Corrêa et al., 2023).
+\parencite[][]{correa_worldwide_2023}. %
+ The democratic approach to value alignment relies on social and political agreements that are inherently subject to change and can be influenced by dominant social forces or political power dynamics. A~study by the European Parliamentary Research Service 
+%\label{ref:RNDsurvGYlFVl}(European Parliament. Directorate General for Parliamentary Research Services., 2020)
+\parencite[][]{} %
+ titled \textit{The Ethics of Artificial Intelligence: Issues and Initiatives} questioned whether the two international frameworks---the EU High-Level Expert Group's Ethics Guidelines for Trustworthy AI (2018) and the OECD Principles on Artificial Intelligence (2019)---were sufficient, at that time, to address the challenges AI governance posed. Since then, the EU AI Act has emerged as an example of a~regulatory framework that categorizes AI systems based on risk levels, but its implementation varies across member states. This variability can lead to inconsistencies in how AI systems are regulated and monitored 
+%\label{ref:RNDg89Xr38Ti3}(Formosa, 2024).
+\parencite[][]{formosa_ethics_2024}. %
+ There is a~risk that consensus-based ethics might fail to uphold core values---such as human dignity, truthfulness, and justice---if these values fall out of favor within the majority consensus or are marginalized in the democratic process.
+
+
+
+Another prominent voice in AI ethics is Payal Arora, a~professor specializing in inclusive AI cultures at Utrecht University. In her recent book, \textit{From Pessimism to Promise: Lessons from the Global South on Designing Inclusive Tech}, Arora provides a~critical perspective informed by postcolonial theory 
+%\label{ref:RNDvtjYpKRV8b}(Arora, 2024).
+\parencite[][]{arora_pessimism_2024}. %
+ She advocates for an approach to AI ethics that respects and responds to societal needs, especially within marginalized communities in the Global South. Her approach emphasizes designing AI that aligns with local contexts rather than imposing universal moral principles that may not resonate with diverse cultural and social realities.
+
+
+
+Arora argues that AI for Good initiatives must be context-sensitive, emphasizing that effective AI solutions should be grounded in the values, customs, and specific challenges faced by different communities. Her critique extends to the dominance of Western-centric ethical ideologies that often inform global AI standards. She contends that such frameworks risk sidelining the perspectives and needs of communities in the Global South, which have historically been marginalized in both technological and ethical discourse.
+
+
+
+Her skepticism toward universal moral principles reflects a~belief that ethics should be contextualized, arising organically from within local communities rather than being externally imposed. Arora emphasizes that ethical AI should empower communities to address their own issues, acknowledging their unique social, political, and cultural contexts. This perspective aligns with her broader critique of morality-driven design initiatives, which she argues often rely on ``grandiose visions of doing good'' without sufficient attention to the specific relational dynamics and policies of the communities they intend to serve. As she writes,
+
+
+
+In designing new tech, we need to shift away from morality-driven design with grandiose visions of doing good. Instead, we should strive for design that focuses on the relationships between people, contexts, and policies 
+%\label{ref:RNDpKVIz04sGh}(Arora, 2024).
+\parencite[][]{arora_pessimism_2024}.%
+
+
+
+
+This perspective is not limited to Western ethical frameworks. For example, Nguyen The Duc Tam and Nguyen Thai Ngan, in their paper \textit{Incorporating Cultural Values Into Responsible Artificial Intelligence (AI) Principles From an Asian Perspective}, argue that the notion of a~``universal code of AI ethics'' is illusory, as cultural differences shape perspectives on what is deemed acceptable, making it imperative to incorporate local cultural values into AI governance, particularly in Asia 
+%\label{ref:RNDOGnNojs1Lk}(Tam and Ngan, 2023).
+\parencite[][]{tam_incorporating_2023}.%
+
+
+
+
+This emphasis on locally relevant solutions presents an alternative to the one-size-fits-all ethical frameworks often advocated in AI ethics 
+%\label{ref:RND5kdMn73Ngb}(World Economic Forum, 2024).
+\parencite[][]{world_economic_forum_ai_2024}. %
+ By focusing on community-driven, context-specific solutions, Arora challenges the assumption that universal moral principles can adequately guide AI ethics across diverse cultures. She calls for AI that respects the agency of local communities, allowing them to determine their ethical priorities and navigate their own socio-political realities.
+
+
+
+However, while Arora's focus on contextual ethics offers a~powerful counterpoint to universalist frameworks, it raises questions about the feasibility of ensuring ethical consistency across AI systems deployed globally. As AI continues to operate across borders and cultures, purely context-driven ethics may lead to a~fragmented landscape where standards vary widely between regions, potentially compromising universal values of human dignity and justice 
+%\label{ref:RNDFlQpysbMfx}(Corrêa et al., 2023).
+\parencite[][]{correa_worldwide_2023}. %
+ Similarly, while Tam and Ngan argue that a~universal code of AI ethics is illusory due to cultural diversity, it is worth noting that universal principles, like those found in the UN Charter of Human Rights, can coexist with cultural adaptability, providing a~stable ethical foundation while respecting local contexts.
+
+
+
+\section{Limitations of Consensus Ethics and the Case for Moral Reasoning in AI}
+
+Consensus-based approaches to AI ethics, while promoting democratic inclusion and pluralism, face significant limitations from a~philosophical standpoint. A~primary issue is their susceptibility to moral relativism, where ethical standards fluctuate in response to shifting societal or political trends. In a~consensus framework, what is deemed morally acceptable can vary widely across regions, cultures, or political contexts, resulting in inconsistent and mutable ethical standards.
+
+
+
+This moral relativism creates inconsistency and ethical instability across different cultural and geographical contexts. As AI systems become increasingly integrated into global applications, they must navigate varied---and sometimes conflicting---ethical frameworks. For example, an AI model that prioritizes privacy in one region may encounter different expectations in areas where surveillance is emphasized for security purposes. Similar discrepancies are evident in global content regulation: US-based websites are often inaccessible in the EU due to stricter EU privacy regulations that many sites choose not to comply with. Such inconsistencies challenge the coherence, fairness, and trustworthiness of AI systems, as their ethical behavior becomes contingent on the region in which they are deployed rather than adhering to stable, universally accepted principles.
+
+
+
+Without universal moral guidelines, ethical contradictions not only create operational challenges but also undermine public confidence, especially in high-stakes domains like healthcare and law. When AI appears arbitrary or biased in its ethical judgments, it risks losing the essential public trust needed for responsible and effective integration into society.
+
+
+
+Recent critiques further highlight the limitations of current consensus-based and externally formulated principles-based approaches to AI ethics. Saviano et al. 
+%\label{ref:RNDBoLwd8xBPP}(2024)
+\parencite*[][]{saviano_reimagining_2024} %
+ argue that despite organizations publicly adopting external AI principles---often characterized by vague and non-specific guidelines---they frequently fail to implement them effectively. This leads to issues such as lack of clarity, inherent contradictions between principles, absence of global consensus, rigidity, lack of enforcement mechanisms, inadequate responses to novel ethical challenges, insufficient stakeholder engagement, and the conflation of ethical and non-ethical values. While they propose shifting to a~values-based approach grounded in organizational values to address these shortcomings, this may not resolve fundamental problems inherent in consensus-based ethics. Relying on organizational values can perpetuate ethical relativism, as these values vary between entities and may prioritize corporate interests over universal moral principles. This variation leads to inconsistent ethical standards and undermines public trust. Without external accountability and a~foundation in moral reasoning, organizations may adopt values that fail to protect human dignity or prevent exploitation.
+
+
+
+Similarly, Buyl and De Bie 
+%\label{ref:RNDrpeLJmr4uK}(2024)
+\parencite*[][]{} %
+ highlight how the absence of universal moral principles can be exploited by organizations engaging in ``ethics-shopping''---selectively adopting interpretations of fairness that align with their business goals while avoiding full commitment to ethical practices. The complexity of fairness can serve as a~cover to circumvent genuine ethical responsibility. Organizations might superficially follow best practices---such as establishing ethics boards and collecting stakeholder feedback---but without a~true commitment to universal moral principles, these measures have limited effect. Fundamentally, solutions toward ethical AI are ineffective if deviations from ethics carry no consequences 
+%\label{ref:RND8YRNX6AfKM}(Buyl and De Bie, 2024).
+\parencite[][]{buyl_inherent_2024}.%
+
+
+
+
+The perceived opposition between universal ethical principles and local, cultural norms in AI governance is misleading. As Gabriel, Arora, and proponents of the Asian perspective argue, cultural and contextual specificity is crucial for effective AI governance 
+%\label{ref:RNDjycavrgtiL}(Gabriel, 2020; Tam and Ngan, 2023; Arora, 2024)
+\parencites[][]{gabriel_artificial_2020}[][]{tam_incorporating_2023}[][]{arora_pessimism_2024} %
+ versal principles; rather, it depends on them. A~stable, universal ethical framework---like the UN Charter of Human Rights---provides the foundation necessary to accommodate local adaptations while ensuring consistency in upholding values like human dignity, justice, and fairness. Without this universal stability, purely context-driven approaches risk fragmentation and ethical relativism, undermining protections for vulnerable populations.
+
+
+
+The limitations of consensus-based, local, or context-specific AI value alignment are also evident in the findings of a~recent systematic review and meta-analysis conducted by researchers from Brazil. Analyzing 200 documents related to AI ethics and governance from 37 countries across six continents, the study found that while most guidelines emphasized principles like privacy, transparency, and accountability, far fewer prioritized essential values like truthfulness, intellectual property, or children's rights. Shockingly, children's rights appeared in only 6\% of these documents, making it the most neglected value in global AI regulations 
+%\label{ref:RNDlyumgQTYKf}(Corrêa et al., 2023).
+\parencite[][]{correa_worldwide_2023}. %
+ This omission is particularly alarming given the growing body of research showing that children are among the most vulnerable demographics severely harmed by AI algorithms such as those on social media. Furthermore, most guidelines failed to propose practical methods for implementing their ethical principles or advocating for legally binding regulation, revealing a~critical gap in the current consensus-driven approaches.
+
+
+
+Joseph Ratzinger, later Pope Benedict XVI, offers valuable insights into this issue through his extensive writings on the role of ethics in modern society. A~renowned theologian respected beyond the Catholic Church, Ratzinger explored the complex relationship between secularism and religion within liberal democracy 
+%\label{ref:RNDmSU501CjZB}(Paskewich, 2008),
+\parencite[][]{paskewich_liberalism_2008}, %
+ providing perspectives especially relevant to AI's ethical alignment. In his critique of consensus-based ethics, Ratzinger emphasized the limitations of relying solely on majority opinion to determine ethical standards. In his famous 2004 debate with Jürgen Habermas, a~prominent philosopher of secular rationalism, Ratzinger argued that moral truth cannot---and should not---be defined by popular consensus 
+%\label{ref:RNDojbOGEd7w9}(Ratzinger and Habermas, 2006).
+\parencite[][]{ratzinger_dialectics_2006}. %
+ While acknowledging the importance of democratic processes for political governance, he insisted that these are inadequate for establishing ethical truths, particularly when fundamental values like human dignity, truthfullnes and justice are at stake.
+
+
+
+Relying solely on consensus risks leading to moral relativism, where ethical standards are shaped by fluctuating public opinion or political trends. This relativism undermines the stability and universality of moral principles, especially as societal values shift over time. Ratzinger's critique is particularly relevant for AI ethics, where consensus-based approaches risk creating systems that adapt to transient social norms rather than adhering to consistent ethical standards. He emphasized that technological progress must be grounded in universal moral principles. Viewing technological advancements as inherently ambiguous 
+%\label{ref:RNDRynTyG4NaM}(Latkovic, 2015)
+\parencite[][]{latkovic_thinking_2015}%
+---capable of offering tremendous benefits but also posing threats to human dignity---he argued that science and technology, including AI, must be guided by ethical principles that transcend utility or popularity 
+%\label{ref:RND42GiPe28mx}(Benedict XVI, 2009, section 70).
+\parencite[][section 70]{benedict_xvi_caritas_2009}. %
+ Universal moral principles are essential for establishing justice and upholding human dignity, providing a~foundation that is not swayed by majority opinion.
+
+
+
+Furthermore, Ratzinger emphasizes that moral reasoning should drive not only the use of technology but also the very creative processes that bring technology into existence 
+%\label{ref:RNDbnzoIGTJ8B}(Ratzinger, 2021),
+\parencite[][]{ratzinger_love_2021}, %
+ addressing the root causes of ethical dilemmas in AI. He cautions that human creativity can wander off course and devise technologies lacking genuine purpose when it loses sight of its divine origin and purpose. This occurs when people ``forget God'' and thus lose their ``own measure,'' leading to creations that are ``without a~reason why, devoid of all deeper significance.'' Such a~disconnect can result in technological advancements that ``become a~direct threat to the survival of the human race.'' 
+%\label{ref:RNDGe9ythH0On}(Ratzinger, 2021, p.87)
+\parencite[][p.87]{ratzinger_love_2021} %
+ In the context of AI, which is engineered in the image of human intelligence, recognizing that human creativity comes from a~higher source ensures that technological development does not lose its true meaning and direction. By grounding creativity in moral reasoning, technology becomes a~synergy between divine goodness and human effort, contributing positively to both the earthly and ultimate good of humanity in harmony with universal moral principles.
+
+
+
+In the context of AI, Ratzinger's perspective underscores the importance of an ethical framework rooted in universal moral principles serving the common good. By critically examining the ultimate goals of AI systems---what they are designed to achieve and why---universal moral principles help determine whether these goals are legitimate and align with fundamental values like respect for human dignity, fostering autonomy, and authentic human growth. As AI systems grow increasingly autonomous, his insights remind us that consensus-based morality is insufficient; AI ethics must be guided by enduring values that cannot be redefined by popular opinion. Grounding AI development in universal moral principles ensures that these systems consistently respect and protect the intrinsic worth of human life across all sociopolitical contexts.
+
+
+
+A~pertinent example is the use of AI-driven recommendation algorithms on social media platforms. Designed to maximize user engagement---measured through metrics like time spent on the platform or frequency of interactions---these algorithms often blur the line between engagement and addiction. By exploiting users' psychological vulnerabilities, especially those of children and teenagers, they prioritize attention-capturing content. This approach frequently promotes sensationalistic or emotionally charged material, drawing users into addictive patterns and exposing them to potentially harmful content 
+%\label{ref:RNDwy2rgbZgQf}(Panoptykon Foundation and Irish Council for Civil Liberties, 2023).
+\parencite[][]{}.%
+
+
+
+
+The impact of such algorithmic prioritization is significant. Research and anecdotal evidence reveal that these algorithms can contribute to mental health issues, including heightened anxiety, depression, and even suicide among vulnerable users 
+%\label{ref:RNDKMqcTtO6Ki}(Panoptykon Foundation and Irish Council for Civil Liberties, 2023).
+\parencite[][]{}. %
+ By optimizing solely for engagement without considering the ethical implications of the content promoted, these systems exploit rather than serve their users, transforming technology from a~potential tool for the common good into a~source of harm.
+
+
+
+In \textit{Caritas in Veritate [Charity in Truth]}, Ratzinger underscores the necessity of moral responsibility in technological development, stating that ``moral evaluation and scientific research must go hand in hand.'' 
+%\label{ref:RNDEHPuhM6Gpx}(Benedict XVI, 2009, section 31)
+\parencite[][section 31]{benedict_xvi_caritas_2009} %
+ He argued that technology should not be driven purely by what is technically feasible or financially rewarding but must be directed by ethical reasoning that prioritizes human dignity and the common good. Without this moral guidance, technological advancements risk becoming exploitative, manipulating human behavior for profit at the expense of individual well-being.
+
+
+
+Ratzinger's insights challenge us to see technological progress, particularly in AI, as ethically accountable. His principles call for moving beyond performance-based goals as the primary metric of success. Instead, AI development should prioritize human welfare, dignity, and mental and emotional health. By integrating moral responsibility with technological innovation, we can create AI that genuinely serves humanity rather than exploiting it.
+
+
+
+Grounding AI development in universal moral principles establishes a~robust ethical framework with clear advantages over consensus-based or relativistic approaches. Three primary benefits of this approach are ethical coherence and stability, protection of human dignity, and prevention of exploitation and power imbalances.
+
+
+
+\textbf{Ethical Coherence and Stability.} Universal moral principles provide consistency by anchoring AI ethics in standards that remain stable over time. Unlike frameworks based on shifting social or political trends, universal principles are not swayed by fluctuations in societal opinion. This stability is critical for ensuring that AI systems behave ethically across various contexts and cultures, following the same guidelines regardless of regional or temporal differences. Such consistency is essential in a~globalized world where AI must build trust, ensure safety, and maintain accountability across diverse applications.
+
+
+
+\textbf{Protection of Human Dignity.} Universal moral principles place human dignity at the center of AI ethics, aligning with Ratzinger's view on the intrinsic worth of every individual. By grounding AI ethics in respect for universal human dignity, we ensure that AI systems treat all individuals fairly, regardless of social status, economic background, or location. This focus on dignity prevents AI from becoming an instrument of discrimination or dehumanization, upholding the ethical imperative to value every person equally.
+
+
+
+\textbf{Avoidance of Exploitation and Power Imbalance.} Universal moral principles help prevent AI from being used to exploit or reinforce power imbalances. Without stable ethical standards, AI risks serving the interests of powerful entities at the expense of marginalized groups. For instance, profit-optimized algorithms can worsen inequalities by targeting vulnerable demographics for exploitation. Universal principles provide a~framework to steer AI development toward the common good, mitigating the risk of AI being co-opted for exploitation and ensuring that it promotes fairness rather than amplifying social and economic disparities.
+
+
+
+\subsubsection{Case Study: How Moral Reasoning Can Regulate Social Media Algorithms}
+
+
+
+To illustrate the practical application of universal moral principles in AI ethics, it is essential to examine a~real-world scenario where such an approach can significantly mitigate negative outcomes. Social media recommender algorithms present a~compelling case study. These algorithms exemplify how reliance on consensus ethics falls short and how grounding AI in universal moral principles can prevent harm and provide clear regulatory guidance.
+
+
+
+Social media platforms deploy recommender algorithms designed primarily to maximize user engagement. Initially, these algorithms use basic demographic data to suggest content. However, research demonstrates that after a~brief period of interaction, these algorithms can accurately infer detailed user demographics, including age 
+%\label{ref:RNDxk4SdLU7p4}(Narayanan, 2023).
+\parencite[][]{narayanan_understanding_2023}. %
+ This means they can determine if a~user is a~child or teenager, effectively identifying underage users. Despite this capability, platforms often continue to expose young users to addictive and potentially harmful content to increase engagement metrics 
+%\label{ref:RNDJOo6OHuaqX}(Panoptykon Foundation and Irish Council for Civil Liberties, 2023).
+\parencite[][]{}.%
+
+
+
+
+Recent legal investigations into TikTok, as revealed in lawsuits by multiple US state Attorneys General, provide direct internal evidence that platform executives are aware of these harms yet prioritize engagement over user safety. Internal company reports acknowledge that compulsive use of the platform leads to loss of analytical skills, memory formation issues, reduced empathy, increased anxiety, and interference with essential responsibilities like sleep and schoolwork. Furthermore, leaked documents reveal that TikTok executives actively dismissed efforts to reduce compulsive usage when such measures threatened engagement metrics. This aligns with broader industry-wide patterns, where addictive design features---such as infinite scrolling, autoplay, and push notifications---are deliberately optimized to prolong user sessions, even when the primary audience includes minors. This is a~clear example of consensus-driven AI governance's ethical failure, highlighting the urgent need for universal, enforceable ethical frameworks that impose clear obligations on platforms to prioritize user well-being over profit-driven algorithmic manipulation 
+%\label{ref:RNDmepvo3Uczw}(Haidt and Zach, 2025).
+\parencite[][]{haidt_tiktok_2025}.%
+
+
+
+
+A~regulatory framework grounded in universal moral principles---placing the protection of human dignity and the welfare of children and youth at its core---can address these issues more effectively than consensus-based approaches. By mandating that social media platforms implement protective features, such a~framework ensures that algorithms detect and shield underage users from harmful content. Since these algorithms are already adept at identifying content that maximizes engagement (and potentially addiction), they can be recalibrated to flag and reduce exposure to such content for vulnerable demographics.
+
+
+
+Concrete examples highlight the necessity of this approach. During the US Senate hearings in January 2024, CEOs of major social media companies were questioned about their platforms' handling of harmful content 
+%\label{ref:RNDs9q6vIKfyH}(Ortutay and Hadero, 2024).
+\parencite[][]{ortutay_meta_2024}. %
+ It was revealed that while platforms had the capability to identify content related to illegal and damaging material---sometimes displaying 'warning screens'---they still allowed users to access this content. A~framework grounded in universal moral principles would dictate that platforms have an obligation not just to warn but to remove such content entirely.
+
+
+
+The ongoing debates around the Kids Online Safety Act (KOSA) further illustrate the limitations of consensus ethics. Non-governmental organizations and parent groups advocate for stricter regulations to protect children online, while social media companies lobby for more lenient measures to preserve profitability 
+%\label{ref:RNDJeoWQoYf2Q}(Paul, 2024).
+\parencite[][]{paul_whats_2024}. %
+ This conflict exemplifies how reliance on consensus can hinder the implementation of necessary protections, leaving vulnerable users at risk. The protection of children should not be subject to prolonged political debate or contingent upon reaching a~consensus, especially when substantial evidence---including research studies, journalistic investigations, and documented cases of harm---demonstrates the negative impact of these algorithms on children's mental health 
+%\label{ref:RNDO58UOJfBvk}(Panoptykon Foundation and Irish Council for Civil Liberties, 2023).
+\parencite[][]{}.%
+
+
+
+
+Universal moral principles mandate that social media companies prioritize users' well-being over financial profit. This requires implementing algorithms that protect children from harmful content and addictive patterns, even if it leads to decreased engagement and significant revenue losses. By placing human dignity and the welfare of vulnerable populations above profit margins, these companies align with ethical standards that serve the common good.
+
+
+
+Anchoring algorithms in stable moral principles ensures consistent ethical behavior and builds trust with users and society by prioritizing integrity over short-term metrics. Recognizing the intrinsic worth of every individual---especially children and teenagers---the algorithms would detect underage users and adjust content recommendations to safeguard their well-being, filtering out harmful or age-inappropriate material and promoting positive development. For instance, a~recent \textit{Wall Street Journal} investigation revealed that TikTok algorithms flood child and adolescent users with harmful videos promoting extreme diets, such as consuming less than 300 calories a~day, and glorifying emaciated appearances through trends like the ``corpse bride diet'' 
+%\label{ref:RNDsBMM5kwSL8}(Hobbs, Barry and Koh, 2021).
+\parencite[][]{hobbs_corpse_2021}. %
+ Within weeks, TikTok algorithms fed these vulnerable users tens of thousands of such weight-loss videos, contributing to severe mental health issues, including eating disorders and suicidality. These practices are not isolated to TikTok but reflect broader industry norms incentivized by nearly \$11 billion in annual advertising revenue targeted at youth aged 0 to 17, underscoring the urgent need for ethical reform 
+%\label{ref:RND5PiaYixjdd}(Costello et al., 2023).
+\parencite[][]{costello_algorithms_2023}.%
+
+
+
+
+Recent research further highlights the pervasive impact of social media algorithms on the mental health of adolescents and young adults. A~systematic review by Khalaf et al. 
+%\label{ref:RNDOgiH1QlGd8}(2023)
+\parencite*[][]{khalaf_impact_2023} %
+ emphasizes that excessive social media use among teenagers is linked to increased mental distress, self-harming behaviors, and suicidality, often exacerbated by features such as infinite scrolling and autoplay, which encourage prolonged engagement. Similarly, a~report by Mental Health America titled \textit{Breaking the Algorithm} 
+%\label{ref:RNDpxNJ5NRKAq}(2024)
+\parencite*[][]{} %
+ highlights how social media platforms amplify harmful content through their recommendation systems, including sensational, polarizing, and graphic material, which negatively affects youth mental health. The study also notes that young users frequently feel a~lack of control over their time spent online, with only 41\% of surveyed participants reporting confidence in managing their social media use. In another investigation, Arora et al. 
+%\label{ref:RNDKMlV2g1SnX}(2024)
+\parencite*[][]{arora_pessimism_2024} %
+ call attention to the adverse psychological impacts of algorithm-driven social media on teenagers, such as the pressures of curated personas and the constant bombardment of notifications, which contribute to anxiety and feelings of inadequacy. Collectively, these studies underscore the urgent need for platforms to integrate safeguards that prioritize mental health, such as algorithmic transparency, limiting harmful content, and promoting digital wellness through early education and protective tools.
+
+
+
+Adherence to universal moral principles would mandate that social media companies do precisely this, namely integrate mechanisms within their algorithms to not only identify vulnerable demographics and protect them from harmful or inappropriate content but also actively detect and remove harmful content altogether. This approach prioritizes values such as human dignity, the rights of children, and the common good. The UN Convention on the Rights of the Child 
+%\label{ref:RNDtVTzVE2WkT}(UNICEF, 1990)
+\parencite[][]{} %
+ already obligates states to protect minors from mental violence, neglect, and exploitation, but it was drafted before the rise of digital platforms. Given that today's most pervasive risks to children's well-being often emerge in online environments, it is imperative to extend this protection as a~universal norm holding digital platforms accountable when their algorithms amplify harmful content that leads to addiction, psychological distress, or exploitation.
+
+
+
+Shockingly, many countries provide social media platforms with legal protections that exempt them from liability for user-generated content based on laws designed to classify them as intermediaries rather than publishers. While this framework was considered appropriate during the Internet's early stages, it is now clearly unethical: although social media platforms are not legally responsible for the harmful content users post, their algorithms exploit this content to keep users engaged---effectively addicted---to maximize revenue, without any consideration for users' well-being. An approach grounded in universal moral principles would necessitate legal reform to hold platforms accountable for the content they host and its outcomes. By leveraging advanced AI tools to ensure that content does not harm anyone, social media platforms could align with ethical imperatives to protect vulnerable populations and uphold fundamental human values.
+
+
+
+Shifting the focus from profit to ethical standards prevents the exploitation of users' vulnerabilities, respects their autonomy, and fosters healthier interactions, thereby reducing corporate power imbalances and creating a~more equitable digital environment. This case study demonstrates how universal moral principles provide a~clear and effective framework for regulating social media algorithms, surpassing the limitations of consensus-based approaches. By integrating stable moral principles into algorithm design, social media platforms can transform their technologies from potential sources of harm into instruments that support users' well-being. Aligning with the ethical imperatives emphasized by Joseph Ratzinger, this strategy ensures that technological advancement serves humanity positively, even if it requires sacrificing financial gain for the sake of moral responsibility.
+
+
+
+\subsubsection{Conclusion: A~Call for Moral Responsibility and Ethical Coherence in AI}
+
+
+
+This paper argued that universal moral principles are essential for ensuring that artificial intelligence systems are ethically grounded, uphold human dignity, and prioritize truth and the well-being of users over financial profit. Relying solely on consensus-based or principles-based ethics introduces ethical instability, fosters exploitation, and fails to address the harmful effects of AI systems, such as social media algorithms that perpetuate addiction and promote harmful content. By integrating universal moral principles into AI ethics, we establish a~foundation that transcends cultural and political fluctuations, ensuring AI serves humanity responsibly and consistently.
+
+
+
+Both moral philosophy and theology offer indispensable contributions to the ethical discourse on AI and must be actively engaged in shaping its development. Together, they provide the tools to articulate universal principles---such as justice, fairness, truthfullness, and the protection of human dignity---while emphasizing the importance of grounding technological progress in higher moral obligations that prioritize the common good. It is also time to build upon the milestones already achieved through global collaboration among diverse cultures and religions, such as the \textit{Rome Call} \textit{for AI Ethics.} Originally signed in February 2020 by major tech companies like Microsoft and IBM, along with representatives from the FAO and the Italian government 
+%\label{ref:RNDVcqDI6Y8N7}(Nelson, 2022),
+\parencite[][]{nelson_rome_2022}, %
+ the \textit{Rome Call} was further strengthened by the joint signature of the three Abrahamic religions in January 2023, when Christian, Jewish, and Muslim leaders launched an appeal for the ethical development of artificial intelligence 
+%\label{ref:RND6t7yxowSqg}(RenAIssance Foundation, 2023).
+\parencite[][]{}. %
+ In 2024, this platform expanded significantly as representatives from eleven world religions, including Buddhism, Hinduism, Zoroastrianism, and Bahá'í, joined the call in Hiroshima, Japan, alongside government officials and leaders from major tech companies 
+%\label{ref:RNDUff9GLCCWt}(Vatican Press Office, 2024).
+\parencite[][]{}.%
+
+
+
+
+The \textit{Rome Call for AI Ethics} promotes ``algorethics''---ethics by design---and underscores how universal moral principles can unite diverse perspectives to guide AI development. As Pope Francis noted during the Hiroshima event, recognizing the contributions of cultural and religious traditions is crucial for wise AI regulation. However, it is time to move beyond mere ``algorethics'' and apply moral reasoning not only to the functioning of algorithms but also to their design and regulation. Every stage of AI development must prioritize meaning and purpose: Why is this technology being created? What is its purpose? How does it foster authentic human growth and freedom while protecting human dignity? By addressing these foundational questions, we can ensure that AI systems are not only technically efficient but also aligned with universal values that promote the common good.
+
+
+
+Moreover, universal moral principles mandate that social media companies and other AI developers leverage their technological capabilities to proactively protect vulnerable populations and eliminate harmful content. Current legal frameworks that exempt platforms from liability for harmful content they amplify are no longer ethical or sustainable. As advanced AI systems are fully capable of detecting and moderating harmful material, moral responsibility requires holding platforms accountable for the outcomes of their algorithms. This shift is crucial for ensuring that AI systems do not exploit users' vulnerabilities but instead foster autonomy, respect human dignity, and promote authentic human growth.
+
+
+
+An ethical framework for AI grounded in universal moral principles is not merely a~safeguard against harm but a~guiding force that ensures technology remains a~servant of humanity rather than a~master. By upholding universal principles and acknowledging the transcendent dignity of each person, we can steer AI development toward a~future where technology enhances, rather than diminishes, the human experience, prioritizing the common good and protecting the most vulnerable members of society.
+
+
+
+
+%\begin{acknowledgement}
+\paragraph{Funding Statement}
+This work was supported by the~Slovenian Research and Innovation Agency project No.: J6-60105.
+%\end{acknowledgement}
+
+
+\printbibliography
+
+
+\end{document}
+

@@ -1,0 +1,16 @@
+%%--------------------------
+%% Plain headings
+%%--------------------------
+
+\makeatletter
+\def\ps@plain{%
+  \renewcommand{\@oddhead}{%
+    \hfill \thepage%
+  }%
+  \renewcommand{\@evenhead}{%
+    \thepage\hfill%
+  }%
+  \renewcommand{\@evenfoot}{}%
+  \renewcommand{\@oddfoot}{\@evenfoot}%
+}
+\makeatother

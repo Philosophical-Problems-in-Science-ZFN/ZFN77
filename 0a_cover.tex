@@ -1,0 +1,42 @@
+%%--------------------------
+%% Cover page
+%%--------------------------
+
+
+\pagenumbering{gobble}
+
+\begin{titlepage}
+	\pdfbookmark[0]{Cover}{cover}
+  \thispagestyle{empty}
+  \pagecolor{covercolor}
+  \color{black}
+  \begin{center}
+    \vspace*{3.5cm}
+    \includegraphics[width=0.9\textwidth]{ZFN_ENG_waskie}
+    \vspace*{2cm}
+    \vfill
+    \newlength{\boxwidth}
+    \newlength{\tempwidth}
+    \settowidth{\boxwidth}{\sffamily\bfseries\Large{No\ \issueno}}
+    \settowidth{\tempwidth}{\LARGE\issueyear}
+    
+    \ifdim\tempwidth>\boxwidth
+      \setlength{\boxwidth}{\tempwidth}
+    \fi
+    
+    {\setlength{\fboxsep}{8pt}\setlength{\fboxrule}{2pt}%
+    \fbox{%
+      \parbox{\boxwidth}{%
+        \centering
+        \sffamily\bfseries\Large{No\ \issueno}\\
+        \sffamily\bfseries\LARGE\issueyear%
+      }%
+    }%
+    }
+  \end{center}
+  \clearpage
+%  \pagecolor{white}
+  \nopagecolor
+\end{titlepage}
+
+\clearpage

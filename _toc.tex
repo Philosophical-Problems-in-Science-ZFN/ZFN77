@@ -1,0 +1,85 @@
+%%--------------------------
+%% ToC
+%%--------------------------
+
+
+\setcounter{tocdepth}{0}
+\makeatletter
+\renewcommand{\contentsname}{Table of contents}
+
+
+\renewcommand\tableofcontents{%
+	\phantomsection%
+	\pdfbookmark[0]{Table of contents}{toc}
+	\pagestyle{empty}%
+  \begin{flushright}%
+    {\sffamily\bfseries\LARGE Philosophical\\Problems\\in Science\par}%
+    \vskip0.35in%
+    {\sffamily\bfseries\large Zagadnienia Filozoficzne w~Nauce\par}%
+    \vskip0.25in%
+    \hrule%
+    \medskip%
+    {\sffamily\bfseries\Large%
+      \issueno\ %
+---%
+      \ \sffamily\bfseries \issueyear%
+    }%
+    \medskip%
+    \hrule%
+  \end{flushright}%
+  \@mkboth{\sffamily\bfseries\contentsname}{\sffamily\bfseries\contentsname}%
+  \vskip0.5in%
+  \@starttoc{toc}%
+}
+\renewcommand*\l@section{\@dottedtocline{1}{0em}{0em}}
+\renewcommand*\l@subsection{\@dottedtocline{1}{0em}{1em}}
+\makeatother
+
+
+\newcommand{\zfnsection}[1]{%
+  \cleardoublepage
+  \thispagestyle{empty}
+  \vspace*{1.7in}%
+  \begin{flushright}
+    {\sffamily\bfseries\LARGE #1\par}%
+  \end{flushright}
+  \vfill
+  \cleardoublepage
+  \addtocontents{toc}{\protect\needspace{3\baselineskip}}%
+  \addtocontents{toc}{\vskip0.7\baselineskip}%
+  \addtocontents{toc}{%
+    \hfill%
+    {\noindent\sffamily\bfseries #1\par}%
+  }%
+  \addtocontents{toc}{\vskip0.5\baselineskip}%
+}
+
+
+\newcommand{\zfnsectiontoconly}[1]{%
+  \addtocontents{toc}{\protect\needspace{3\baselineskip}}%
+  \addtocontents{toc}{\vskip0.7\baselineskip}%
+  \addtocontents{toc}{%
+    \hfill%
+    {\noindent\sffamily\bfseries #1\par}%
+  }%
+  \addtocontents{toc}{\vskip0.5\baselineskip}%
+}
+
+
+
+
+\newcounter{tocnr}
+\setcounter{tocnr}{0}
+\newenvironment{tocitem}[2]{%
+  \refstepcounter{tocnr}%
+  \edef\thisTocID{x\arabic{tocnr}}%
+  \cleardoublepage%
+  \phantomsection\label{\thisTocID}%
+  \pdfbookmark[0]{{#2},\ {#1}}{\thisTocID}%
+  \addtocontents{toc}{\protect\needspace{3\baselineskip}}%
+  \addtocontents{toc}{\noindent{\textbf{#1}}\\}%
+  \addtocontents{toc}{\textit{#2}\dotfill\pageref{\thisTocID}}%
+  \addtocontents{toc}{\vskip0.8\baselineskip}%
+}{%
+  \label{e\thisTocID}%
+}
