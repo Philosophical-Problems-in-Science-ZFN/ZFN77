@@ -775,10 +775,16 @@
     \endgroup
   \fi
 }
+
 \newcommand*\zfn@contact@details{%
-  { \emailsymbol{}Corresponding author. Email: \zfn@email@list}%
-  \zfn@number@list
+  \ifnum\zfn@author@cnt=1
+    Email: \zfn@email@list
+  \else
+    {\emailsymbol{}Corresponding author. Email: \zfn@email@list}%
+    \zfn@number@list
+  \fi
 }
+
 \let\@thanks\@empty
 \newcommand*\zfn@author@list{%
   \@tempcnta\z@\relax
@@ -824,19 +830,24 @@
     \zfn@author@star@aux
   }%
 }
+
 \newcommand*\zfn@author@star@aux{%
-  \protected@edef\zfn@author@footnotes{%
-    % \zfn@author@fnsymbol{\z@}%
-    \emailsymbol%
-    \ifnum\zfn@affil@cnt>\@ne\relax
-      %,%
-    \else
-      \ifnum\zfn@affil@alt@cnt>\z@\relax
-        %,%
+  \ifnum\zfn@author@cnt=1
+    % Do nothing for a single author
+  \else
+    \protected@edef\zfn@author@footnotes{%
+      \emailsymbol%
+      \ifnum\zfn@affil@cnt>\@ne\relax
+        % (if needed, add a comma here)
+      \else
+        \ifnum\zfn@affil@alt@cnt>\z@\relax
+          % (or here)
+        \fi
       \fi
-    \fi
-  }%
+    }%
+  \fi
 }
+
 \newcommand*\zfn@author@affil{%
   \zfn@ifundefined{%
     @affil@\@roman\csname @author@affil@\@roman\@tempcnta\endcsname
@@ -1351,12 +1362,12 @@
 
 \newcommand*\zfn@layout@zfnsize{%
   \ifzfn@simfonts\simfonts\fi
-%  \geometry{paperwidth=174mm,paperheight=247mm,
-%      top=2.3cm,bottom=1.4cm,left=1.8cm,right=1.5cm,
-%      headsep=0.8cm}
-   \geometry{verbose,paperwidth=145mm,paperheight=205mm,landscape=false,
-   twoside,top=2cm,bottom=1.2cm,left=1.5cm,right=1.3cm,
-         headsep=0.6cm}
+  \geometry{paperwidth=174mm,paperheight=247mm,
+      top=2.3cm,bottom=1.4cm,left=1.8cm,right=1.5cm,
+      headsep=0.8cm}
+%   \geometry{verbose,paperwidth=145mm,paperheight=205mm,landscape=false,
+%   twoside,top=2cm,bottom=1.2cm,left=1.5cm,right=1.3cm,
+%         headsep=0.6cm}
 }
 
 %-------------------------------
