@@ -1408,7 +1408,7 @@
 % Bibliography and reference code
 %-------------------------------
 \providecommand*\zfn@reference@code{% default citation style; can be modified in journal config or preamble
-  \RequirePackage[authordate-trad,noibid,backend=biber,natbib,dashed=false]{biblatex-chicago}
+  \RequirePackage[authordate-trad,uniquename=false,noibid,backend=biber,natbib,dashed=false]{biblatex-chicago}
   \renewcommand*{\bibfont}{\footnotesize}
 }
 
