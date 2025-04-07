@@ -612,6 +612,7 @@
 \newcommand*\titlesize{\LARGE}
 \newcommand*\datesize{\footnotesize}
 \newcommand*\firstheadsize{\scriptsize}
+\newcommand*\polishtitlesize{\tiny}
 \newcommand*\affilfont{\footnotesize}
 \newcommand*\authorfont{}
 \newcommand*\emailfont{\footnotesize}
@@ -679,17 +680,18 @@
   \fi
   \newpage\vspace*{\dimexpr-\headsep-\headheight\relax}
     \noindent
-    \begin{minipage}[t]{\dimexpr\textwidth-25mm\relax}
+    \begin{minipage}[t]{\dimexpr\textwidth-28mm\relax}
       \vspace{0pt}% Force top alignment from first line
       {\firstheadsize{\journalnamefont\zfn@journal@name} 
-      (\zfn@year), {\volumefont\zfn@vol}, \thepage--\pageref{LastPage}
-      \par doi:{\zfn@doi}}
+      (\zfn@year), {\volumefont\zfn@vol}, \thepage--\pageref{LastPage}\\
+      \polishtitlesize{(\zfn@journal@polishname)}
+      \par\firstheadsize{doi:\href{https://doi.org/\zfn@doi}{\zfn@doi}}}
       \vspace{7pt}%
       \par {\sffamily\bfseries\color{structure@color}\MakeUppercase{\convertchar{\zfn@manuscript}{-}{ }}\par}
     \end{minipage}%
-    \begin{minipage}[t]{25mm}
+    \begin{minipage}[t]{28mm}
       \vspace{0pt}
-      \includegraphics[width=25mm]{ZFN_ENG_waskie}
+      \includegraphics[width=28mm]{ZFN}
     \end{minipage}
     \par
 %  \parbox[b]{\dimexpr\textwidth-36mm\relax}{%
@@ -1399,8 +1401,11 @@
 %-------------------------------
 \def\zfn@jnl@zfn{%
   \def\zfn@journal@name{Philosophical Problems in Science}% (ZFN)}%
+  \def\zfn@journal@polishname{Zagadnienia Filozoficzne w Nauce}% (ZFN)}%
   \zfn@layout@zfnsize
 }
+
+
 % Load immediately  
 \zfn@jnl@zfn
 
@@ -1408,7 +1413,15 @@
 % Bibliography and reference code
 %-------------------------------
 \providecommand*\zfn@reference@code{% default citation style; can be modified in journal config or preamble
-  \RequirePackage[authordate-trad,uniquename=false,noibid,backend=biber,natbib,dashed=false]{biblatex-chicago}
+  \RequirePackage[%
+  authordate-trad,%
+%  backref=true,%
+  uniquename=false,%
+  noibid,%
+  backend=biber,%
+  natbib,%
+  dashed=false]%
+  {biblatex-chicago}
   \renewcommand*{\bibfont}{\footnotesize}
 }
 

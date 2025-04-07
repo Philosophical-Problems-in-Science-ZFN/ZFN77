@@ -1,5 +1,5 @@
 \documentclass[%
-  manuscript=article,   % Use a - if you need a space e.g.,
+  manuscript=article,   % Use a - if you need a space e.g., review-essay
   year=2024,
   volume=77,
   doi=00000.000,
@@ -7,17 +7,14 @@
 %  revd=January 30, 2025,
 %  accptd=2025-02-11,
 ]{zfn}
-\setcounter{page}{3}
-\setcounter{page}{3}
-\setcounter{page}{3}
+
+
 
 
 \usepackage{amsmath}
 \usepackage[nopatch]{microtype}
 \usepackage{booktabs}
 
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black, breaklinks=true, linktocpage}
 
 
 
@@ -224,7 +221,7 @@ An STM, or splitting Turing machine, is an automaton equipped with a circular ta
 
 \begin{description}
 \item[Def. (\textbf{Splitting Turing Machine, STM}):] An \label{DefSTM} STM is described by a tuple $S =$ $(Q, \Sigma, f, q_1,$ $q_f, c_n)$, where $Q$ and $\Sigma$ are the finite sets of states and tape symbols, respectively; $q_1\in Q$ is the initial state; $q_f \in Q$ is the halting state; $c_n$ is the initial tape of size $n$ that defines the symbols for all $n$ initial positions of the machine; and the transition function $f$
-is defined for all $q\in Q$, except $q_f$, and for all read symbols $\sigma$\footnote{For simplicity, the definition may omit specifying the value of $f$ for pairs of states and symbols that are never reached.}.
+is defined for all $q\in Q$, except $q_f$, and for all read symbols $\sigma$.\footnote{For simplicity, the definition may omit specifying the value of $f$ for pairs of states and symbols that are never reached.}
 \end{description}
 
 We write $f$ as a list of transition rules. Each rule is expressed as a quadruple $t = (q_x, \sigma, v, q_y)$, with initial state $q_x$, read symbol $\sigma$, instruction $v$, and next state $q_y$. The possible instructions are as follows:
@@ -342,7 +339,7 @@ The initial clauses of the FOL formula in clause normal form are as follows:
 \end{equation}
 
 \begin{equation}
-\{F_{aux0}[x_1, \ldots, x_1], \neg P_{q_1}[sk_{s_1}(x_1), sk_{s_2}(x_1), \ldots, sk_{s_n}(x_1), sk_G]\} \label{ini2}
+\{F_{aux0}[x_1, \ldots, x_1], \neg P_{q_1}[sk_{s_1}(x_1), sk_{s_2}(x_1), \ldots, sk_{s_n}(x_1), sk_G]\}. \label{ini2}
 \end{equation}
 
 The arity of $F_{aux0}$ is $n$, i.e. the number of initial cells.
@@ -354,7 +351,7 @@ The ATP-search starts by deriving $\neg P_{q_1}[sk_{s_1}(sk_G),sk_{s_2}(sk_G), \
 For the halting state $q_f$, we add the following unit clause:
 
 \begin{equation}
-\{P_{q_f}[x_1, ..., x_n, sk_G]\}
+\{P_{q_f}[x_1, ..., x_n, sk_G]\}.
 \end{equation}
 
 Let us now see which clauses are needed for every kind of transition rule. We assume that the description of each rule is given in the format $(q_x, \sigma_1, v, q_y)$.
@@ -367,7 +364,7 @@ Suppose that the symbol to be written is $\sigma_2$. To represent Rule W, we sim
 
 \begin{equation}
  \{P_{q_x}[sk_{\sigma_1}(x_1), x_2, x_3, \ldots, x_{n+1}],
- \neg P_{q_y}[sk_{\sigma_2}(x_1), x_2, x_3, \ldots, x_{n+1}]\}
+ \neg P_{q_y}[sk_{\sigma_2}(x_1), x_2, x_3, \ldots, x_{n+1}]\}.
 \end{equation}
 
 \subsubsection{Rule S}
@@ -377,14 +374,14 @@ To represent Rule S, we add the following clause:
 \begin{small}
 \begin{equation}
 \hspace{-0.95cm} \{P_{q_x}[sk_{\sigma_1}(x_1), x_2, x_3, \ldots, x_{n+1}],
- \neg F_{auxS_{\sigma_1}}[sk_{\sigma_1}(x_1), x_2, x_3, \ldots, x_{n+1}, sk_{q_y}]\}
+ \neg F_{auxS_{\sigma_1}}[sk_{\sigma_1}(x_1), x_2, x_3, \ldots, x_{n+1}, sk_{q_y}]\}.
 \end{equation}
 \end{small}
 
 Additionally, we include the following clauses in the set of clauses (these clauses are included only once, not for every Rule S dictating the machine's behavior):
 
 \begin{equation}
- \{F_{auxS_{\alpha}}[x_2, x_1, x_3, \ldots, x_{n+1}, sk_\beta], \neg P_\beta[x_2, sk_\alpha(x_1), x_3, \ldots, x_{n+1}]\}
+ \{F_{auxS_{\alpha}}[x_2, x_1, x_3, \ldots, x_{n+1}, sk_\beta], \neg P_\beta[x_2, sk_\alpha(x_1), x_3, \ldots, x_{n+1}]\}.
 \end{equation}
 
 The rationale for the introduction of the auxiliary predicate letters $F_{auxS_{\alpha}}$ is that they allow for the representation of the splitting of the cells while obeying the restriction that, in the clauses, the only permissible argument for the Skolem functions $sk_a$ for every $a \in \Sigma$ is $x_1$, cf. p. \pageref{x1rest}.
@@ -393,11 +390,11 @@ The rationale for the introduction of the auxiliary predicate letters $F_{auxS_{
 
 The specification of Rule R is considerably more intricate compared to Rules W and S. Let us begin with an example to illustrate how mimicking this rule in a tight connection tableau calculus unfolds. Imagine that at a given instant during the machine's execution, its state $q_x$ and the tape $[1,2,3,4,5,6]$ are represented by the following literal, which appears on a leaf of a certain open branch of the tableau:\\
 
-$P_{q_x}[sk_1(sk_G), sk_2(sk_3(sk_4(sk_G))), sk_5(sk_6(sk_G)), sk_G]$\\
+$P_{q_x}[sk_1(sk_G), sk_2(sk_3(sk_4(sk_G))), sk_5(sk_6(sk_G)), sk_G].$\\
 
 The idea is that at the end of the mimicking operations in the tableau, we shall obtain the following literal on the leaf of this branch:\\
 
-$P_{q_y}[sk_2(sk_G), sk_3(sk_4(sk_5(sk_6(sk_G)))), sk_1(sk_G), sk_G]$\\
+$P_{q_y}[sk_2(sk_G), sk_3(sk_4(sk_5(sk_6(sk_G)))), sk_1(sk_G), sk_G].$\\
 
 \noindent representing the tape $[2,3,4,5,6,1]$ and the machine in state $q_y$. This evolution during the application of the rules of the tableau calculus is designed to mimic the fact that the header of the machine moves one position to the right on the tape, transitioning from the state $q_x$ to the state $q_y$.
 
@@ -405,14 +402,14 @@ To ensure that Rule R will be applied only if the scanned symbol is $\sigma_1$, 
 
 \begin{equation}
 \hspace{-0.5cm} \{P_{q_x}[sk_{\sigma_1}(x_1), x_2, x_3, ..., x_{n+1}\},
- \neg F_{aux_R}[sk_{\sigma_1}(x_1), x_2, x_3, ..., x_{n+1},sk_{q_y}]\} \label{FauxR}
+ \neg F_{aux_R}[sk_{\sigma_1}(x_1), x_2, x_3, ..., x_{n+1},sk_{q_y}]\}. \label{FauxR}
 \end{equation}
 
 Now, we start moving the symbols to the right. Initially, we add the following clauses to the set of clauses:
 
 \begin{equation}
 \begin{tabular}{c}$\{F_{aux_R}[x_2, sk_\alpha(x_1), x_3, \dots , x_{n+2}],$ \\
-$\neg F_{aux1_\alpha}[sk_\alpha(x_1), x_1, sk_G, x_3, \ldots, x_{n}, x_2, x_{n+1},x_{n+2}]\}$\end{tabular} \label{Faux1}
+$\neg F_{aux1_\alpha}[sk_\alpha(x_1), x_1, sk_G, x_3, \ldots, x_{n}, x_2, x_{n+1},x_{n+2}]\}.$\end{tabular} \label{Faux1}
 \end{equation}
 
 The rationale for the arguments of $F_{aux1_\alpha}$ will only be made clear after the following operations 1 to 4 are explained. We need to perform the following operations with the arguments of $F_{aux1_\alpha}$ to represent the tape after the execution of the rule:
@@ -430,7 +427,7 @@ To accomplish the first task, we include the following clauses:
 
 \begin{small}
 \begin{equation}
-  \hspace{-1cm}  \{F_{aux1_\alpha}[x_2, x_3, \ldots, x_{n+3}, x_1, x_{n+4}], \neg F_{aux2}[sk_\alpha(x_1), x_3, \ldots, x_{n+3}, x_1, x_{n+4}]\}\label{Faux2}
+  \hspace{-1cm}  \{F_{aux1_\alpha}[x_2, x_3, \ldots, x_{n+3}, x_1, x_{n+4}], \neg F_{aux2}[sk_\alpha(x_1), x_3, \ldots, x_{n+3}, x_1, x_{n+4}]\}.\label{Faux2}
 \end{equation}
 \end{small}
 
@@ -448,7 +445,7 @@ To accomplish the second task, we include the following clauses:
 
 \begin{equation}
 \{F_{aux2}[x_1, sk_G, x_2\ldots, x_{n+3}],
-\neg F_{aux4}[x_1, x_2 \ldots, x_{n+3}]]\}
+\neg F_{aux4}[x_1, x_2 \ldots, x_{n+3}]]\}.
 \end{equation}
 
 The third task is similarly completed by including the following clauses:
@@ -464,14 +461,14 @@ The third task is similarly completed by including the following clauses:
 
 \begin{equation}
 \{F_{aux4}[x_1, sk_G, x_2 \ldots, x_{n+2}],
-\neg F_{aux6}[x_1, x_2 \ldots, x_{n+2}]\}
+\neg F_{aux6}[x_1, x_2 \ldots, x_{n+2}]\}.
 \end{equation}
 
 Finally, to accomplish the fourth task, we include the following clauses:
 
 \begin{equation}
 \{F_{aux6}[x_1, \ldots, x_{n+1}, sk_\beta],
-\neg P_\beta[x_1, \ldots, x_{n+1}]\} \label{Pbeta}
+\neg P_\beta[x_1, \ldots, x_{n+1}]\}. \label{Pbeta}
 \end{equation}
 
 \subsubsection{Mimicking the evolution of STMs}
@@ -508,7 +505,7 @@ Since we can produce an arbitrary number of further pairs of STMs for this case,
 In contrast to metamathematical proof methods, such as the diagonal method, we base our results on examples and computation. STMs and their automated translations into Krom--Horn clauses are especially suited for explaining undecidability in terms of pattern detection in ATP. To aid the visualization of our argument, we compute color diagrams instead of printing complex symbolic expressions and proofs.
 
 Our results are based on a \emph{Mathematica} program called \emph{KromHornSolver}, which we implemented ourselves.\footnote{This program is available at \href{https://github.com/TimmLampert/KromHornSolver}{www.github.com/TimmLampert/KromHornSolver}, %{here},
-and an implementation of it can be accessed at \href{https://www2.cms.hu-berlin.de/newlogic/webMathematica/Logic/kromhornsolver.jsp}{www2.cms.hu-berlin.de/newlogic/webMathematica/Logic/kromhornsolver.jsp}.}%{here}.}
+and an implementation of it can be accessed at \href{https://www2.cms.hu-berlin.de/newlogic/webMathematica/Logic/kromhornsolver.jsp}{www2.cms.hu-berlin.de/newlogic/webMathematica/Logic/kromhornsolver.jsp}.} %{here}.}
 This program not only conducts proof searches for clauses but also for corresponding FOL-formulas without skolemization, which are generated from the clauses. The ATP-proof search for those FOL-formulas is based on a different calculus that applies the rule $\wedge$I instead of the expansion rule prior to universal quantifier eliminations. Avoiding skolemization makes it impossible to reproduce the repeating patterns of the evolution of STMs in the case of splitting cells, thereby precluding the application of a loop criterion. This occurs due to the fact that the splitting tape can no longer be represented by $P$-literals with increasing nested skolem-functions but only by several $P$-literals dispersed among other literals in different scopes of different quantifiers, which increase in number by the splitting process. Consequently, there is no remaining main branch of an ATP-search with $P$-literals corresponding to the evolution of the STM. Instead, the evolution of STMs is encoded in a complex FOL-expression with literals not arranged in a regular sequence but distributed across different scopes of different quantifiers. By implementing two different ATP-searchs based on two different notation (with and without skolemization), we intended to underscore the impact of notation and calculus on pattern detection. 
 
 The \emph{KromHornSolver} takes an STM plus an upper bound for execution as its input. It then performs the following steps:
