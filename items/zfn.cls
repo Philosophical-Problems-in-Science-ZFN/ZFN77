@@ -245,7 +245,7 @@
 	citecolor=black,
 	urlcolor=black,
 	breaklinks=true,
-	linktocpage
+	linktocpage,
 }
 \captionsetup{
   font={
@@ -691,7 +691,7 @@
     \end{minipage}%
     \begin{minipage}[t]{28mm}
       \vspace{0pt}
-      \includegraphics[width=28mm]{ZFN}
+      \includegraphics[width=28mm]{ZFN_transparent}
     \end{minipage}
     \par
 %  \parbox[b]{\dimexpr\textwidth-36mm\relax}{%
@@ -1065,11 +1065,12 @@
     \zfn@ifundefined{@email@\@roman\@tempcnta}{}{%
       \advance\@tempcntb\@ne\relax
       \ifnum\@tempcntb>\@ne\relax
-        ;
+        ;% separate multiple e‐mails with a semicolon, if desired
       \fi
-      \expandafter\expandafter\expandafter\url\expandafter
-        \expandafter\expandafter{%
-           \csname @email@\@roman\@tempcnta\endcsname
+      % Expand to something like mailto:somebody@example.com
+      \expandafter\expandafter\expandafter\url
+      \expandafter\expandafter\expandafter{%
+        \expandafter mailto:\csname @email@\@roman\@tempcnta\endcsname
       }%
     }%
     \expandafter\zfn@email@list@aux
@@ -1362,15 +1363,68 @@
 }
 
 
+
+
+% Define storage for abstract text (provide a default/fallback)
+\newcommand*\zfn@abstract@text{No abstract provided for PDF metadata.}
+% Define the user command to set the abstract text for metadata
+\newcommand*\abstracttext[1]{\gdef\zfn@abstract@text{#1}}
+\@onlypreamble\abstracttext % Make it usable only in the preamble
+
+% Declare a helper macro for PDF authors *outside* \AtBeginDocument
+% otherwise its definition might be local to the \AtBeginDocument group.
+\newcommand*\zfn@pdf@authors{}
+
+\AtBeginDocument{%
+  % --- Build the author string for PDF metadata ---
+  % We need to concatenate author names. \gdef makes it global.
+  \gdef\zfn@pdf@authors{} % Initialize empty
+  \@tempcnta=\z@ % Use a temporary counter
+  \ifnum\zfn@author@cnt>\z@ % Check if there are any authors defined
+    \loop % Start loop
+      \ifnum\@tempcnta<\zfn@author@cnt % Loop while counter < total authors
+      \advance\@tempcnta by 1 % Increment counter
+      \ifnum\@tempcnta=1 % First author?
+         % Just add the name
+         % Use \expandafter\xdef to correctly assign the expanded value globally
+         \expandafter\xdef\expandafter\zfn@pdf@authors\expandafter{\@nameuse{@author@\@roman\@tempcnta}}
+      \else % Subsequent authors?
+         % Add comma, space, then name
+         % Use \expandafter\xdef to correctly append the expanded value globally
+         \expandafter\xdef\expandafter\zfn@pdf@authors\expandafter{\zfn@pdf@authors, \@nameuse{@author@\@roman\@tempcnta}}
+      \fi
+    \repeat % End loop
+  \fi
+
+  % --- Setup hyperref PDF metadata ---
+  % The braces {...} around the values are TeX grouping characters.
+  % They ensure the entire value (potentially containing commas or spaces)
+  % is passed correctly to hyperref. They DO NOT add literal quotes
+  % to the PDF metadata fields themselves.
+  \hypersetup{%
+    pdfauthor   = {{\zfn@headauthors}},       % Use the generated author list
+    pdftitle    = {\@title},               % Use the full title stored in \@title
+    pdfsubject  = {\zfn@abstract@text},    % Use the text provided by \abstracttext{...}
+    pdfkeywords = {{\@keywords}}             % Use the keywords stored in \@keywords
+    % pdfcreator = {LaTeX with zfn class}, % Optional
+    % pdfproducer = {pdfTeX/LuaTeX/XeTeX}, % Optional
+  }%
+}
+
+
+
+
+
 \newcommand*\zfn@layout@zfnsize{%
   \ifzfn@simfonts\simfonts\fi
-  \geometry{paperwidth=174mm,paperheight=247mm,
-      top=2.3cm,bottom=1.4cm,left=1.8cm,right=1.5cm,
+  \geometry{paperwidth=170mm,paperheight=240mm,
+      top=2.3cm,bottom=1.75cm,left=2cm,right=2cm,
       headsep=0.8cm}
 %   \geometry{verbose,paperwidth=145mm,paperheight=205mm,landscape=false,
 %   twoside,top=2cm,bottom=1.2cm,left=1.5cm,right=1.3cm,
 %         headsep=0.6cm}
 }
+
 
 %-------------------------------
 % Layout: Only one size: "zfnsize"
